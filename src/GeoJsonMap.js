@@ -8,8 +8,8 @@ import parcel_info from './assets/18102019.json';
 
 export default class geoJSON extends Component<{}, State> {
     state = {
-      lat: 51.505,
-      lng: -0.09,
+      lat: 37.975438, 
+      lng: -121.274070,
       zoom: 12,
     }
   
@@ -23,7 +23,13 @@ export default class geoJSON extends Component<{}, State> {
     }
   
     onEachFeature(feature: Object, layer: Object) {
-      const popupContent = ` <Popup><p>Customizable Popups <br />with feature information.</p><pre>Borough: <br />${feature.properties.name}</pre></Popup>`
+      const popupContent = ` <Popup><p>ApnToken Information</p><pre>Assessor's Parcel Number: <br />${feature.properties.apn}</pre>
+      <pre>Parcel Area: <br />${feature.properties.shape_area}</pre>
+      <pre>Parcel Area: <br />${feature.properties.agencyname}</pre>
+      <pre>Parcel Area: <br />${feature.properties.agencyuniqueid}</pre>
+      <pre>Parcel Area: <br />${feature.properties.county}</pre>
+      <pre>Parcel Area: <br />${feature.properties.acres}</pre>
+      <pre>Parcel Area: <br />${feature.properties.crop2016}</pre></Popup>`
       layer.bindPopup(popupContent)
     }
   

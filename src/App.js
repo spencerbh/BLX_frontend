@@ -72,9 +72,6 @@ function Main () {
           <Grid.Row stretched>
             <GeoJsonMap />
           </Grid.Row>
-          <Grid.Row stretched>
-            <ApnTokenInfo />
-          </Grid.Row>
           <Grid.Row>
             <Interactor accountPair={accountPair} />
             <Events />
